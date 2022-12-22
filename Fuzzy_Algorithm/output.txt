@@ -1,0 +1,7 @@
+Running the simulation…
+Fuzzification => done
+Inference => done
+Defuzzification => done
+The predicted risk is normal (37.50)
+The predicted cash is much (60.00)
+

@@ -1,0 +1,46 @@
+name
+description
+
+4
+
+proj_funding IN 0 100
+4
+very_low TRAP 0 0 10 30 
+low TRAP 10 30 40 60 
+medium TRAP 40 60 70 90 
+high TRAP 70 90 100 100 
+
+exp_level IN 0 60
+3
+beginner TRI 0 15 30 
+intermediate TRI 15 30 45 
+expert TRI 30 60 60 
+
+risk OUT 0 100
+3
+low TRI 0 25 50 
+normal TRI 25 50 75 
+high TRI 50 100 100
+
+
+cash OUT 0 100
+3
+little TRI 0 25 50
+good TRI 25 50 75
+much TRI 50 100 100
+
+8
+not proj_funding high and risk low => cash little
+exp_level beginner and risk normal => cash good
+proj_funding medium or exp_level intermediate and risk high => cash much
+
+proj_funding high or exp_level expert => risk low
+proj_funding medium and exp_level intermediate => risk normal
+proj_funding medium and exp_level beginner => risk normal
+proj_funding low and exp_level beginner => risk high
+proj_funding very_low and_not exp_level expert => risk high
+
+
+2
+50
+40
